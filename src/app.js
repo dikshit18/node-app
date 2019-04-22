@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const app = express()
 const hbs = require('hbs')
+const port = process.env.PORT || 3000
 // const filePath = path.join(__dirname , '../')
 
 //Define Paths for express config
@@ -19,7 +20,7 @@ app.get('',(req,res)=>{
         age:23
     })
 })
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log('App is running');
 })
 console.log('Hey');
